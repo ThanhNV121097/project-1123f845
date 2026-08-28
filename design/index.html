@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello World</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #5b6472;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --ring: rgba(37, 99, 235, 0.28);
+      --card: #f8fafc;
+      --border: #dbe3ee;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      color: var(--text);
+    }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .hero {
+      width: min(760px, 100%);
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      padding: clamp(28px, 6vw, 56px);
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 6px var(--ring);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+    .subline {
+      margin: 18px auto 0;
+      max-width: 36rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    form {
+      margin: 34px auto 0;
+      display: grid;
+      gap: 14px;
+      width: min(100%, 420px);
+    }
+    label {
+      text-align: left;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 18px;
+      font: inherit;
+      font-size: 1rem;
+      background: #fff;
+      color: var(--text);
+      transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    }
+    input::placeholder { color: #94a3b8; }
+    input:hover { border-color: #b8c6da; }
+    input:focus-visible,
+    button:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 6px var(--ring);
+      border-color: var(--primary);
+    }
+    button {
+      border: 0;
+      border-radius: 16px;
+      padding: 16px 20px;
+      font: inherit;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(180deg, #3b82f6 0%, var(--primary) 100%);
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28);
+    }
+    button:hover { transform: translateY(-1px); background: linear-gradient(180deg, #3b82f6 0%, var(--primary-hover) 100%); }
+    button:active { transform: translateY(0); }
+    .hint {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 520px) {
+      .hero { border-radius: 22px; padding: 24px 18px; }
+      form { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero" aria-labelledby="greeting-title">
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span>Simple greeting page</div>
+      <h1 id="greeting-title">Hello, World!</h1>
+      <p class="subline">My first project built by the agent team.</p>
+      <form id="hello-form" novalidate>
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Ada Lovelace" autocomplete="name">
+        <button type="submit">Say hello</button>
+        <p class="hint">Press Enter or click button.</p>
+      </form>
+    </section>
+  </main>
+  <script>
+    const form = document.getElementById('hello-form');
+    const input = document.getElementById('name');
+    const title = document.getElementById('greeting-title');
+    const defaultGreeting = 'Hello, World!';
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = input.value.trim();
+      title.textContent = name ? `Hello, ${name}!` : defaultGreeting;
+    });
+  </script>
+</body>
+</html>
