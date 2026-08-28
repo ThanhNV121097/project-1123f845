@@ -43,12 +43,12 @@ Behaviour:
 
 **Requirement GENERAL-002 — Update greeting in browser**
 
-*As a* Visitor, *I want to* type a name and press the button, *so that* the greeting reflects my input without leaving page.
+*As a* Visitor, *I want to* type a name and press the button or press Enter, *so that* the greeting reflects my input without leaving page.
 
 Behaviour:
 
-1. When Visitor enters a non-empty name and activates button, system updates headline in browser to `Hello, {name}!`.
-2. When Visitor leaves input empty and activates button, system keeps headline `Hello, World!`.
+1. When Visitor enters a non-empty name and activates button or presses Enter while name input has focus, system updates headline in browser to `Hello, {name}!`.
+2. When Visitor leaves input empty and activates button or presses Enter while name input has focus, system keeps headline `Hello, World!`.
 3. When Visitor enters surrounding spaces, system trims them before update.
 4. System stores no greeting or name on server.
 
@@ -58,9 +58,10 @@ Behaviour:
 |---|---|---|---|
 | AC-1 | Visitor loads page | Page renders | Centered hero appears on gradient background inside translucent bordered card with eyebrow badge `Simple greeting page`, blue dot, headline `Hello, World!`, subline, name input, and `Say hello` button |
 | AC-2 | Visitor scans page | Page renders | No navigation, footer, or extra section appears |
-| AC-3 | Visitor types `Ada` in name input | Visitor activates button | Headline changes to `Hello, Ada!` in browser |
-| AC-4 | Visitor leaves name input empty | Visitor activates button | Headline remains `Hello, World!` |
+| AC-3 | Visitor types `Ada` in name input or presses Enter with `Ada` entered | Visitor activates button or presses Enter while input has focus | Headline changes to `Hello, Ada!` in browser |
+| AC-4 | Visitor leaves name input empty or presses Enter with input empty | Visitor activates button or presses Enter while input has focus | Headline remains `Hello, World!` |
 | AC-5 | Visitor types ` Ada ` in name input | Visitor activates button | Headline changes to `Hello, Ada!` and spaces are ignored |
+| AC-6 | Visitor types ` Ada ` in name input and presses Enter | Visitor presses Enter while input has focus | Headline changes to `Hello, Ada!` and spaces are ignored
 
 **Failure, boundary and permission behaviour** — the part most often skipped and most often the source of bugs.
 
