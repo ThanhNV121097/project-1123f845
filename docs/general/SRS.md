@@ -43,12 +43,12 @@ Behaviour:
 
 **Requirement GENERAL-002 — Update greeting in browser**
 
-*As a* Visitor, *I want to* type a name and press the button, *so that* the greeting reflects my input without leaving page.
+*As a* Visitor, *I want to* type a name and press the button or press Enter, *so that* the greeting reflects my input without leaving page.
 
 Behaviour:
 
-1. When Visitor enters a non-empty name and activates button, system updates headline in browser to `Hello, {name}!`.
-2. When Visitor leaves input empty and activates button, system keeps headline `Hello, World!`.
+1. When Visitor enters a non-empty name and activates button or presses Enter while name input has focus, system updates headline in browser to `Hello, {name}!`.
+2. When Visitor leaves input empty and activates button or presses Enter while name input has focus, system keeps headline `Hello, World!`.
 3. When Visitor enters surrounding spaces, system trims them before update.
 4. System stores no greeting or name on server.
 
