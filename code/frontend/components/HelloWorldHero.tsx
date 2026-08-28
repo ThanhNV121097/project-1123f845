@@ -7,6 +7,7 @@ import styles from './HelloWorldHero.module.css';
 export default function HelloWorldHero() {
   const [name, setName] = useState('');
   const [greeting, setGreeting] = useState(helloWorldMock.defaultGreeting);
+  const hint = helloWorldMock.hint;
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -36,7 +37,7 @@ export default function HelloWorldHero() {
             autoComplete="name"
           />
           <button className={styles.button} type="submit">{helloWorldMock.buttonLabel}</button>
-          <p className={styles.hint}>{helloWorldMock.hint}</p>
+          <p className={styles.hint}>{hint}</p>
         </form>
       </section>
     </main>
