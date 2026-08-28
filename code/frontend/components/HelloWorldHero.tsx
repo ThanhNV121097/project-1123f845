@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from 'react';
-import { helloWorldMock } from '@/lib/mock/build-hello-world-page';
+import { helloWorldMock } from '../lib/mock/build-hello-world-page';
 import styles from './HelloWorldHero.module.css';
 
 export default function HelloWorldHero() {
