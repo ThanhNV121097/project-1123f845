@@ -58,10 +58,12 @@ Behaviour:
 |---|---|---|---|
 | AC-1 | Visitor loads page | Page renders | Centered hero appears on gradient background inside translucent bordered card with eyebrow badge `Simple greeting page`, blue dot, headline `Hello, World!`, subline, name input, and `Say hello` button |
 | AC-2 | Visitor scans page | Page renders | No navigation, footer, or extra section appears |
-| AC-3 | Visitor types `Ada` in name input or presses Enter with `Ada` entered | Visitor activates button or presses Enter while input has focus | Headline changes to `Hello, Ada!` in browser |
-| AC-4 | Visitor leaves name input empty or presses Enter with input empty | Visitor activates button or presses Enter while input has focus | Headline remains `Hello, World!` |
-| AC-5 | Visitor types ` Ada ` in name input | Visitor activates button | Headline changes to `Hello, Ada!` and spaces are ignored |
-| AC-6 | Visitor types ` Ada ` in name input and presses Enter | Visitor presses Enter while input has focus | Headline changes to `Hello, Ada!` and spaces are ignored
+| AC-3 | Visitor types `Ada` in name input | Visitor activates button | Headline changes to `Hello, Ada!` in browser |
+| AC-4 | Visitor types `Ada` in name input | Visitor presses Enter while name input has focus | Headline changes to `Hello, Ada!` in browser |
+| AC-5 | Visitor leaves name input empty | Visitor activates button | Headline remains `Hello, World!` |
+| AC-6 | Visitor leaves name input empty | Visitor presses Enter while name input has focus | Headline remains `Hello, World!` |
+| AC-7 | Visitor types ` Ada ` in name input | Visitor activates button | Headline changes to `Hello, Ada!` and spaces are ignored |
+| AC-8 | Visitor types ` Ada ` in name input | Visitor presses Enter while name input has focus | Headline changes to `Hello, Ada!` and spaces are ignored |
 
 **Failure, boundary and permission behaviour** — the part most often skipped and most often the source of bugs.
 
