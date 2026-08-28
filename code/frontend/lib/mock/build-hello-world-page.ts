@@ -2,8 +2,7 @@ export type HelloWorldMock = {
   defaultGreeting: string;
   subline: string;
   label: string;
-  buttonLabel: string;
-};
+  hint: 'Press Enter or click button.',
 
 export const helloWorldMock: HelloWorldMock = {
   defaultGreeting: 'Hello, World!',
