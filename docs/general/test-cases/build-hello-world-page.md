@@ -22,14 +22,32 @@ Risk level: low. Single static page, no backend, no persistence. Coverage stays 
 **Then** headline changes in browser to `Hello, Ada!`
 **Check:** render_url
 
+### Scenario: Update heading for non-empty name with Enter
+**Given** Visitor types `Ada` in name input
+**When** Visitor presses Enter while name input has focus
+**Then** headline changes in browser to `Hello, Ada!`
+**Check:** render_url
+
 ### Scenario: Keep default heading for empty name
 **Given** Visitor leaves name input empty
 **When** Visitor activates `Say hello` button
 **Then** headline remains `Hello, World!`
 **Check:** render_url
 
+### Scenario: Keep default heading for empty name with Enter
+**Given** Visitor leaves name input empty
+**When** Visitor presses Enter while name input has focus
+**Then** headline remains `Hello, World!`
+**Check:** render_url
+
 ### Scenario: Trim surrounding spaces before update
 **Given** Visitor types ` Ada ` in name input
 **When** Visitor activates `Say hello` button
+**Then** headline changes in browser to `Hello, Ada!` and surrounding spaces are ignored
+**Check:** render_url
+
+### Scenario: Trim surrounding spaces before update with Enter
+**Given** Visitor types ` Ada ` in name input
+**When** Visitor presses Enter while name input has focus
 **Then** headline changes in browser to `Hello, Ada!` and surrounding spaces are ignored
 **Check:** render_url
