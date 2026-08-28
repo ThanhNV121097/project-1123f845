@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #ffffff;
+  --color-background-soft: #f8fbff;
+  --color-text: #111111;
+  --color-muted: #5b6472;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-soft: rgba(37, 99, 235, 0.28);
+  --color-card: #f8fafc;
+  --color-card-alpha: rgba(255, 255, 255, 0.86);
+  --color-border: #dbe3ee;
+  --color-border-strong: #b8c6da;
+  --color-button-text: #ffffff;
+  --space-0: 0;
+  --space-2: 0.5rem;
+  --space-3: 0.625rem;
+  --space-4: 0.875rem;
+  --space-5: 1rem;
+  --space-6: 1.125rem;
+  --space-7: 1.375rem;
+  --space-8: 1.5rem;
+  --space-9: 1.75rem;
+  --space-10: 2.125rem;
+  --space-11: 3.5rem;
+  --text-sm: 0.92rem;
+  --text-md: 0.95rem;
+  --text-base: 1rem;
+  --text-lg: 1.2rem;
+  --text-hero-min: 2.8rem;
+  --text-hero-max: 5.5rem;
+  --line-tight: 0.95;
+  --line-relaxed: 1.7;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --tracking-tight: -0.05em;
+  --radius-md: 1rem;
+  --radius-lg: 1.375rem;
+  --radius-xl: 1.75rem;
+  --radius-full: 999px;
+  --shadow-focus: 0 0 0 6px var(--color-primary-soft);
+  --shadow-card: 0 20px 60px rgba(15, 23, 42, 0.08);
+  --shadow-button: 0 14px 30px rgba(37, 99, 235, 0.28);
+  --motion-fast: 160ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--space-0);
+  min-height: 100vh;
+  color: var(--color-text);
+  background: linear-gradient(180deg, var(--color-background) 0%, var(--color-background-soft) 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: var(--font-weight-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-8);
+}
