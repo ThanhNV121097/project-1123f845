@@ -33,12 +33,12 @@ This module delivers one static greeting page for visitors. It gives the project
 
 **Requirement GENERAL-001 — Render centered greeting hero**
 
-*As a* Visitor, *I want to* see a centered greeting hero with headline, subline, name input, and button, *so that* I can interact with the page as designed.
+*As a* Visitor, *I want to* see a centered greeting hero with headline, eyebrow badge, subline, name input, and button, *so that* I can interact with the page as designed.
 
 Behaviour:
 
-1. When Visitor opens page, system shows single centered hero on white background with near-black text and blue button.
-2. System renders headline `Hello, World!`, one subline, one text input for name, and one button labeled `Say hello`.
+1. When Visitor opens page, system shows single centered hero on a gradient page background with a translucent bordered card.
+2. System renders eyebrow badge with blue dot and text `Simple greeting page`, headline `Hello, World!`, one subline, one text input for name, and one button labeled `Say hello`.
 3. System shows no navigation, footer, or extra section.
 
 **Requirement GENERAL-002 — Update greeting in browser**
