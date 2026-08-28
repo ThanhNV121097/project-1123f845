@@ -36,6 +36,8 @@ export default function HelloWorldHero() {
             autoComplete="name"
           />
           <p className={styles.hint}>{helloWorldMock.hint}</p>
+          <button className={styles.button} type="submit">{helloWorldMock.buttonLabel}</button>
+        </form>
       </section>
     </main>
   );
