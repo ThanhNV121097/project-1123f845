@@ -1,3 +1,5 @@
+import HelloWorldHero from '../components/HelloWorldHero';
+
 export default function Home() {
-  return <main className="app-shell" />;
+  return <HelloWorldHero />;
 }
