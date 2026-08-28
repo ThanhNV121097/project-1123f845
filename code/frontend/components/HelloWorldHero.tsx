@@ -35,8 +35,8 @@ export default function HelloWorldHero() {
             placeholder="Ada Lovelace"
             autoComplete="name"
           />
-          <p className={styles.hint}>{helloWorldMock.hint}</p>
           <button className={styles.button} type="submit">{helloWorldMock.buttonLabel}</button>
+          <p className={styles.hint}>{helloWorldMock.hint}</p>
         </form>
       </section>
     </main>
