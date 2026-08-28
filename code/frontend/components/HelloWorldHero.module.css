@@ -107,7 +107,6 @@
   border: 0;
   background: var(--color-primary);
   color: var(--color-button-text);
-  box-shadow: var(--shadow-button);
   cursor: pointer;
   font-size: var(--text-base);
   font-weight: var(--font-weight-semibold);
