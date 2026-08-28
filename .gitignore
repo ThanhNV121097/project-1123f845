@@ -1,0 +1,12 @@
+# Local compose overrides
+.env
+
+# Frontend dependencies and build output
+node_modules/
+.next/
+out/
+
+# OS and IDE
+.DS_Store
+.vscode/
+.idea/
