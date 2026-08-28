@@ -56,7 +56,7 @@ Behaviour:
 
 | # | Given | When | Then |
 |---|---|---|---|
-| AC-1 | Visitor loads page | Page renders | Centered hero appears on white background with headline `Hello, World!`, subline, name input, and `Say hello` button |
+| AC-1 | Visitor loads page | Page renders | Centered hero appears on gradient background inside translucent bordered card with eyebrow badge `Simple greeting page`, blue dot, headline `Hello, World!`, subline, name input, and `Say hello` button |
 | AC-2 | Visitor scans page | Page renders | No navigation, footer, or extra section appears |
 | AC-3 | Visitor types `Ada` in name input | Visitor activates button | Headline changes to `Hello, Ada!` in browser |
 | AC-4 | Visitor leaves name input empty | Visitor activates button | Headline remains `Hello, World!` |
